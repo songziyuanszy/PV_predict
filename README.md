@@ -1,8 +1,5 @@
 # PV_predict
 """
-Donate my code for free!!!
-The author's name is '''Ziyuan Song'''
-
 What is the code:
 1. The code aims to generates tomorrow's PV probability prediction based on today's 288-point PV output curve.
 2. A very easy model, may not be pretty well. But with all the functions.

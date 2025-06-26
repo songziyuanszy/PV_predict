@@ -14,7 +14,8 @@ def interval_plot(day, scenior_gen_out, area_num=0):
     quantile_values=np.zeros((1, 96, 8))
     for time in range(96):
         a=scenior_data[:, :, :, 0, time].reshape(-1)
-        quantile_values[0, time, :]=np.percentile(a, [1, 10, 20, 30, 70, 80, 90, 99])
+        # ignore the max and min value
+        quantile_values[0, time, :]=np.percentile(a, [1, 10, 20, 30, 70, 80, 90, 99]) 
 
     y0=quantile_values[area_num, 0:96, 0]
     y10=quantile_values[area_num, 0:96, 1]
